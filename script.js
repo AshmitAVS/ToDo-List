@@ -17,19 +17,16 @@ function addTask(){
         count++;
     }
     inputBox.value="";
-    saveData();
 }
 
 listContainer.addEventListener("click",function(event){
     if(event.target.tagName==="LI"){
         event.target.classList.toggle("checked");
-        saveData();
     }
     else if(event.target.tagName==="SPAN"){
         event.target.parentElement.remove();
         count--;
         counter.textContent=count-1;
-        saveData();
     }
 },false);
 
